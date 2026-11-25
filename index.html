@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link
+     rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./main.css" />
+    <title>Movie  Website | Animated Landing Page</title>    
+</head>
+<body>
+    <header>
+    <a href="#" class="logo">iMovies</a>
+    <ul class="nav">
+         <li><a href="#" class="nav-link" data-filter="Home" aria-label="Home"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+         <li><a href="#" class="nav-link" data-filter="adults">Adults</a></li>
+         <li><a href="#" class="nav-link" data-filter="kids">Kids</a></li>
+         <li><a href="#" class="nav-link" data-filter="trend">Trend</a></li>
+         <li><a href="#" class="nav-link" data-filter="all">My List</a></li>
+    </ul>
+    <div class="search">
+        <input type="text" placeholder="Search">
+        <i class="fa fa-search" aria-hidden="true"></i>
+    </div>
+    </header>
+    <div class="banner">
+        <div class="content the-little-mermaid active" data-category="Home">
+            <h2 class="movie-title-text">The Little Mermaid</h2>
+        </div>
+        <div class="content bg-65" data-category="Home">
+            <h2 class="movie-title-text">65</h2>
+        </div>
+        <div class="content the-covenant" data-category="Home">
+            <h2 class="movie-title-text">The Covenant</h2>
+        </div>
+        <div class="content the-black-demon" data-category="Home">
+            <h2 class="movie-title-text">The Black Demon</h2>
+        </div>
+        <div class="content the-tank" data-category="Adults">
+            <h2 class="movie-title-text">The Tank</h2>
+        </div>
+        <div class="kids-blank" aria-label="Kids section"></div>
+        <div class="carousel-box">
+                <div class="carousel">
+                    <div class="carousel-item"
+                     onclick="changeBg('bg-little-mermaid.jpg', 'the-little-mermaid')">
+                        <img src="./the-little-mermaid.jpeg" alt="">
+                    </div>
+                    <div class="carousel-item" onclick="changeBg('bg-65.jpeg', 'bg-65');">
+                        <img src="./65.jpg" alt="">
+                    </div>
+                    <div class="carousel-item" 
+                    onclick="changeBg('bg-the-covenant.jpeg', 'the-covenant')"
+                    >
+                        <img src="./the-covenant.jpg" alt="The Covenant">
+                    </div>
+                    <div class="carousel-item"
+                     onclick="changeBg('bg-the-black-demon.jpeg', 'the-black-demon');"
+                    >
+                        <img src="./the-black-demon.jpg" alt="The Black Demon">
+                    </div>
+                    <div class="carousel-item" onclick="changeBg('bg-the-tank.jpeg','the-tank');"
+                    >
+                        <img src="./the-tank.jpeg" alt="The Tank">
+                    </div>
+                </div>
+            </div>
+        <a href="#" class="play" onclick="toggleVideo(); return false;"
+            ><i class="fa fa-play-circle-o" aria-hidden="true"></i> Watch Trailer
+        </a>
+             <ul class="sci">
+                <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                </li>
+                <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                </li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="trailer">
+            <video src="./THE_BLACK_DEMON___Trailer(720p).mp4"
+                muted
+                controls
+            ></video>
+            <span class="close" aria-label="Close trailer" onclick="toggleVideo();">✕</span>
+        </div>
+    <script src="./script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+          $(document).ready(function(){
+    $('.carousel').carousel();
+  });
+    </script> 
+       
+</body>
+</html>
